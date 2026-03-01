@@ -81,30 +81,33 @@ const Hairs = () => {
   ];
 
   return (
-    <div className="h-auto min-h-auto bg-white p-4 md:p-6 mt-4 md:mt-8 mb-4">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => setSelectedItem(item)}
-            className="relative flex flex-col items-center text-center group cursor-pointer"
-          >
-            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] asym-card overflow-hidden border-2 border-gray-200 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <img
-                src={Hair2}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {item.tag && (
-              <div className="absolute top-0 right-0 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs md:text-sm px-2 md:px-3 py-1 asym-btn font-bold">
-                {item.tag}
+    <div className="h-auto min-h-auto bg-white py-6 md:py-10">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => setSelectedItem(item)}
+              className="relative flex flex-col items-center text-center group cursor-pointer"
+            >
+              <div className="w-full aspect-square asym-card overflow-hidden border-2 border-gray-200 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <img
+                  src={Hair2}
+                  alt={item.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            )}
-            <div className="mt-3 text-gray-700 font-semibold text-sm md:text-lg">
-              {item.name}
+              {item.tag && (
+                <div className="absolute top-2 right-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs md:text-sm px-2 md:px-3 py-1 asym-btn font-bold shadow-lg">
+                  {item.tag}
+                </div>
+              )}
+              <div className="mt-3 text-gray-700 font-semibold text-sm md:text-base lg:text-lg line-clamp-2">
+                {item.name}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Product Modal */}
