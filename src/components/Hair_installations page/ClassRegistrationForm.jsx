@@ -123,17 +123,25 @@ const ClassRegistrationForm = () => {
                 Upload Payment Receipt <span className="text-red-500">*</span>
               </label>
               <div className="relative">
-                <Upload className="absolute left-3 top-3 text-gray-400" size={20} />
                 <input
                   type="file"
                   {...register("receipt", { required: "Receipt upload is required" })}
-                  className="w-full pl-10 pr-4 py-3 border-2 border-gray-300 asym-input focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-500"
+                  className="hidden"
+                  id="receipt-upload"
+                  accept="image/*,.pdf"
                 />
+                <label
+                  htmlFor="receipt-upload"
+                  className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-dashed border-gray-300 asym-card cursor-pointer hover:border-purple-500 hover:bg-purple-50 transition-all duration-500"
+                >
+                  <Upload className="text-gray-400" size={24} />
+                  <span className="text-gray-600 font-medium">Click to upload receipt</span>
+                </label>
               </div>
               {errors.receipt && (
                 <p className="text-red-500 text-sm mt-1">{errors.receipt.message}</p>
               )}
-              <p className="text-xs text-gray-500 mt-1">Upload proof of payment ($100)</p>
+              <p className="text-xs text-gray-500 mt-1">Upload proof of payment ($100) - JPG, PNG or PDF</p>
             </div>
 
             <div>
