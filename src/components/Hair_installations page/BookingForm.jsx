@@ -151,8 +151,9 @@ const BookingForm = () => {
 
             <button
               type="submit"
-              className="w-full asym-btn bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white py-3 font-bold text-lg hover:shadow-orange-500/40 transition-all duration-700"
+              className="w-full asym-btn bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white py-3 font-bold text-lg hover:shadow-orange-500/40 transition-all duration-700 flex items-center justify-center gap-2"
             >
+              <Calendar size={20} />
               Submit Booking
             </button>
           </form>

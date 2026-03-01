@@ -151,8 +151,9 @@ const ClassRegistrationForm = () => {
 
             <button
               type="submit"
-              className="w-full asym-btn bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white py-3 font-bold text-lg hover:shadow-blue-500/40 transition-all duration-700"
+              className="w-full asym-btn bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white py-3 font-bold text-lg hover:shadow-blue-500/40 transition-all duration-700 flex items-center justify-center gap-2"
             >
+              <GraduationCap size={20} />
               Submit Registration
             </button>
           </form>
