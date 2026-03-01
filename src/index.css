@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,10 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+  font-family: 'Playfair Display', serif;
 }
 
 html, body {

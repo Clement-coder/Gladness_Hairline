@@ -21,7 +21,7 @@ function Navbar() {
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        <a href="/" className="text-sm md:text-2xl font-bold tracking-wide text-[#4169E1] italic hover:opacity-80 transition-opacity">
+        <a href="/" className="text-sm md:text-2xl font-bold tracking-wide text-[#4169E1] italic hover:opacity-80 transition-opacity logo">
           GLADNESS HAIRLINE
         </a>
 
