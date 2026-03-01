@@ -34,7 +34,9 @@ const slides = [
             loop
             muted
             playsInline
+            preload="auto"
             className="h-full w-full object-cover"
+            style={{ pointerEvents: 'none' }}
           ></video>
         </div>
       </div>
@@ -99,7 +101,9 @@ const slides = [
             loop
             muted
             playsInline
+            preload="auto"
             className="h-full w-full object-cover opacity-90"
+            style={{ pointerEvents: 'none' }}
           ></video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#2d4a9e] via-transparent to-transparent pointer-events-none"></div>

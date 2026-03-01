@@ -20,7 +20,9 @@ function Banner() {
           loop
           muted
           playsInline
+          preload="auto"
           className="h-full w-full object-cover"
+          style={{ pointerEvents: 'none' }}
         >
           Your browser does not support the video tag.
       </video>
