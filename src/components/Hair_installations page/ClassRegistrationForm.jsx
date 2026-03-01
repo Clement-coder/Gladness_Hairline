@@ -151,7 +151,7 @@ const ClassRegistrationForm = () => {
 
             <button
               type="submit"
-              className="w-full asym-btn bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white py-3 font-bold text-lg hover:shadow-purple-500/40 transition-all duration-700"
+              className="w-full asym-btn bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white py-3 font-bold text-lg hover:shadow-blue-500/40 transition-all duration-700"
             >
               Submit Registration
             </button>
