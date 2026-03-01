@@ -15,7 +15,7 @@ const ClassRegistrationForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-10">
+    <div className="max-w-4xl mx-auto bg-white/60 backdrop-blur-sm asym-card shadow-lg hover:shadow-2xl p-6 mt-10">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         Register for Class
       </h2>
@@ -27,7 +27,7 @@ const ClassRegistrationForm = () => {
           <input
             type="text"
             {...register("fullName", { required: "Full Name is required" })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.fullName && (
             <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>
@@ -47,7 +47,7 @@ const ClassRegistrationForm = () => {
                 message: "Invalid email format",
               },
             })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -68,7 +68,7 @@ const ClassRegistrationForm = () => {
                 message: "Phone number must be 10 digits",
               },
             })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.phone && (
             <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -83,7 +83,7 @@ const ClassRegistrationForm = () => {
           <input
             type="date"
             {...register("preferredDate", { required: "Preferred Date is required" })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.preferredDate && (
             <p className="text-red-500 text-sm mt-1">{errors.preferredDate.message}</p>
@@ -98,7 +98,7 @@ const ClassRegistrationForm = () => {
           <input
             type="file"
             {...register("receipt", { required: "Receipt upload is required" })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.receipt && (
             <p className="text-red-500 text-sm mt-1">{errors.receipt.message}</p>
@@ -112,14 +112,14 @@ const ClassRegistrationForm = () => {
           <textarea
             {...register("comments")}
             rows="4"
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           ></textarea>
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-400 font-semibold"
+          className="w-full asym-btn bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-2 px-4 hover:shadow-blue-500/40 font-semibold"
         >
           Submit Registration
         </button>

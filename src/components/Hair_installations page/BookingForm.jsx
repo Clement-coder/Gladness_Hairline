@@ -15,7 +15,7 @@ const BookingForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg mt-4 p-6">
+    <div className="max-w-2xl mx-auto bg-white/60 backdrop-blur-sm asym-card shadow-lg hover:shadow-2xl mt-4 p-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
         Book an Installation
       </h2>
@@ -27,7 +27,7 @@ const BookingForm = () => {
           <input
             type="text"
             {...register("name", { required: "Full Name is required" })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.name && (
             <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -47,7 +47,7 @@ const BookingForm = () => {
                 message: "Invalid email format",
               },
             })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -67,7 +67,7 @@ const BookingForm = () => {
                 message: "Phone number must be 10 digits",
               },
             })}
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           {errors.phone && (
             <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -82,7 +82,7 @@ const BookingForm = () => {
             <input
               type="date"
               {...register("date", { required: "Date is required" })}
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+              className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             {errors.date && (
               <p className="text-red-500 text-sm mt-1">{errors.date.message}</p>
@@ -95,7 +95,7 @@ const BookingForm = () => {
             <input
               type="time"
               {...register("time", { required: "Time is required" })}
-              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+              className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             {errors.time && (
               <p className="text-red-500 text-sm mt-1">{errors.time.message}</p>
@@ -111,13 +111,13 @@ const BookingForm = () => {
           <textarea
             {...register("comments")}
             rows="4"
-            className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
+            className="w-full border border-gray-300 asym-input p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          className="w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 font-semibold"
+          className="w-full asym-btn bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2 px-4 hover:shadow-orange-500/40 font-semibold"
         >
           Submit Booking
         </button>

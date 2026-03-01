@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Asymmetric Curve Button */
+.asym-btn {
+  @apply rounded-tl-[60px] rounded-br-[60px] rounded-tr-[12px] rounded-bl-[12px] 
+         transition-all duration-500 ease-in-out shadow-xl;
+}
+
+.asym-btn:hover {
+  @apply rounded-tr-[60px] rounded-bl-[60px] rounded-tl-[12px] rounded-br-[12px];
+}
+
+/* Asymmetric Curve Card/Grid */
+.asym-card {
+  @apply rounded-tl-[40px] rounded-br-[40px] rounded-tr-[12px] rounded-bl-[12px] 
+         transition-all duration-500 ease-in-out;
+}
+
+.asym-card:hover {
+  @apply rounded-tr-[40px] rounded-bl-[40px] rounded-tl-[12px] rounded-br-[12px];
+}
+
+/* Asymmetric Curve Input */
+.asym-input {
+  @apply rounded-tl-[30px] rounded-br-[30px] rounded-tr-[8px] rounded-bl-[8px] 
+         transition-all duration-500 ease-in-out;
+}
+
+.asym-input:focus {
+  @apply rounded-tr-[30px] rounded-bl-[30px] rounded-tl-[8px] rounded-br-[8px];
+}

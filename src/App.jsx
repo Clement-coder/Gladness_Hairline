@@ -12,6 +12,9 @@ import InstallationPage from './pages/InstallationPage';
 import Home from './pages/Home';
 import BookingForm from './components/Hair_installations page/BookingForm';
 import ClassRegistrationForm from './components/Hair_installations page/ClassRegistrationForm';
+import LoginPage from './pages/LoginPage';
+import TrackOrderPage from './pages/TrackOrderPage';
+import ShoppingCartPage from './pages/ShoppingCartPage';
 
 function App() {
 
@@ -19,16 +22,21 @@ function App() {
     <Router>
       <div className='flex flex-col min-h-screen'>
         <Navbar/>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/installation" element={<InstallationPage />} />
-          <Route path="/banner" element={<Banner/>} />
-          <Route path="/new-arrival-banner" element={<NewArrivalBanner/>} />
-          <Route path="/hairs" element={<Hairs/>} />
-          <Route path="/flash-sale" element={<FlashSale/>} />
-          <Route path="/booking-form" element={<BookingForm/>} />
-          <Route path="/class-form" element={<ClassRegistrationForm/>} />
-        </Routes>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/installation" element={<InstallationPage />} />
+            <Route path="/banner" element={<Banner/>} />
+            <Route path="/new-arrival-banner" element={<NewArrivalBanner/>} />
+            <Route path="/hairs" element={<Hairs/>} />
+            <Route path="/flash-sale" element={<FlashSale/>} />
+            <Route path="/booking-form" element={<BookingForm/>} />
+            <Route path="/class-form" element={<ClassRegistrationForm/>} />
+            <Route path="/login" element={<LoginPage/>} />
+            <Route path="/track-order" element={<TrackOrderPage/>} />
+            <Route path="/cart" element={<ShoppingCartPage/>} />
+          </Routes>
+        </div>
         <Footer/>
       </div>      
     </Router>
