@@ -4,9 +4,17 @@ import { Search, Package, Truck, CheckCircle, MapPin, Clock, Phone, Mail } from 
 const TrackOrderPage = () => {
   const [orderNumber, setOrderNumber] = useState("");
   const [orderData, setOrderData] = useState(null);
+  const [error, setError] = useState("");
 
   const handleTrack = (e) => {
     e.preventDefault();
+    
+    if (orderNumber.trim().length < 5) {
+      setError("Order number must be at least 5 characters");
+      return;
+    }
+    
+    setError("");
     // Simulate order tracking
     setOrderData({
       orderNumber: orderNumber,
@@ -41,20 +49,31 @@ const TrackOrderPage = () => {
         {/* Search Box */}
         <div className="bg-white/70 backdrop-blur-xl asym-card shadow-lg hover:shadow-2xl p-4 md:p-6 mb-6 md:mb-8 border-2 border-white/50">
           <form onSubmit={handleTrack} className="flex flex-col md:flex-row gap-3 md:gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 md:left-4 top-3 md:top-4 text-gray-400" size={20} />
-              <input
-                type="text"
-                value={orderNumber}
-                onChange={(e) => setOrderNumber(e.target.value)}
-                placeholder="Enter your order number (e.g., ORD-12345)"
-                required
-                className="w-full pl-10 md:pl-12 pr-4 py-2 md:py-3 border-2 border-gray-300 asym-input focus:outline-none focus:ring-2 focus:ring-blue-500 text-base md:text-lg"
-              />
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 md:left-4 top-3 md:top-4 text-gray-400" size={20} />
+                <input
+                  type="text"
+                  value={orderNumber}
+                  onChange={(e) => {
+                    setOrderNumber(e.target.value);
+                    setError("");
+                  }}
+                  placeholder="Enter your order number (e.g., ORD-12345)"
+                  className={`w-full pl-10 md:pl-12 pr-4 py-2 md:py-3 border-2 asym-input focus:outline-none focus:ring-2 focus:ring-blue-500 text-base md:text-lg transition-all duration-500 ${
+                    error ? 'input-error border-red-500' : 'border-gray-300'
+                  }`}
+                />
+              </div>
+              {error && (
+                <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                  <span>⚠</span> {error}
+                </p>
+              )}
             </div>
             <button
               type="submit"
-              className="asym-btn bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 md:px-8 py-2 md:py-3 font-bold text-base md:text-lg hover:shadow-blue-500/40"
+              className="asym-btn bg-[#4169E1] text-white px-6 md:px-8 py-2 md:py-3 font-bold text-base md:text-lg hover:shadow-lg"
             >
               Track Order
             </button>

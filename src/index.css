@@ -6,10 +6,6 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, .logo {
   font-family: 'Playfair Display', serif;
 }
 
@@ -78,6 +74,18 @@ html, body {
   }
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.2s ease-out;
 }
@@ -109,6 +117,10 @@ html, body {
   animation: slideUp 0.4s ease-out;
 }
 
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
 /* Asymmetric Curve Button */
 .asym-btn {
   @apply rounded-tl-[60px] rounded-br-[60px] rounded-tr-[12px] rounded-bl-[12px] 
@@ -133,8 +145,17 @@ html, body {
 .asym-input {
   @apply rounded-tl-[30px] rounded-br-[30px] rounded-tr-[8px] rounded-bl-[8px] 
          transition-all duration-500 ease-in-out;
+  border-style: dashed !important;
 }
 
 .asym-input:focus {
   @apply rounded-tr-[30px] rounded-bl-[30px] rounded-tl-[8px] rounded-br-[8px];
+  border-style: dashed !important;
+}
+
+/* Input Error State */
+.input-error {
+  @apply border-red-500 border-2;
+  border-style: dashed !important;
+  animation: shake 0.5s ease-in-out;
 }

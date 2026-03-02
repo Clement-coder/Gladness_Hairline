@@ -72,107 +72,92 @@ const Footer = () => {
           <h3 className="font-semibold mb-2">About Us</h3>
           <ul className="space-y-1">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/about" className="hover:underline">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/contact" className="hover:underline">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="/faq" className="hover:underline">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">Shop</h3>
+          <ul className="space-y-1">
+            <li>
+              <a href="/shop" className="hover:underline">
+                All Products
+              </a>
+            </li>
+            <li>
+              <a href="/installation" className="hover:underline">
+                Installation Services
+              </a>
+            </li>
+            <li>
+              <a href="/track-order" className="hover:underline">
+                Track Order
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">Customer Service</h3>
+          <ul className="space-y-1">
+            <li>
+              <a href="/shipping-policy" className="hover:underline">
+                Shipping & Returns
+              </a>
+            </li>
+            <li>
+              <a href="/privacy-policy" className="hover:underline">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Terms of Usage
+              <a href="/contact" className="hover:underline">
+                Support
               </a>
             </li>
           </ul>
         </div>
-
         <div>
-          <h3 className="font-semibold mb-2">Customer Service</h3>
+          <h3 className="font-semibold mb-2">My Account</h3>
           <ul className="space-y-1">
             <li>
-              <a href="#" className="hover:underline">
-                Shipment & Payment
+              <a href="/login" className="hover:underline">
+                Sign In
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Return Policy
+              <a href="/register" className="hover:underline">
+                Register
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Help & FAQs
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Klarna
+              <a href="/dashboard" className="hover:underline">
+                My Orders
               </a>
             </li>
           </ul>
         </div>
-
         <div>
-          <h3 className="font-semibold mb-2">Coupon / Cash / Points</h3>
-          <ul className="space-y-1">
-            <li>
-              <a href="#" className="hover:underline">
-                Coupon
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Cash
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Points
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-semibold mb-2">Contact Us</h3>
-          <ul className="space-y-1">
-            <li>
-              <a href="#" className="hover:underline">
-                Contact Info
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Wholesale
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="col-span-2 md:col-span-1">
-          <h3 className="font-semibold mb-2">Customer Service</h3>
-          <ul className="space-y-1">
-            <li>+234 (070) 424-21322</li>
-            <li className="break-words">Wholesale (earn money): +8615038958671</li>
-            <li className="break-words">WhatsApp (save money): +2347042421322</li>
-            <li>
-              <a href="mailto:julia@juliahair.com" className="hover:underline break-words">
-                @gladness_hairline.com
-              </a>
-            </li>
-          </ul>
+          <h3 className="font-semibold mb-2">Payment Methods</h3>
+          <div className="flex gap-2 flex-wrap">
+            <img src={VisaLogo} alt="Visa" className="h-6 md:h-8" />
+            <img src={MasterCardLogo} alt="MasterCard" className="h-6 md:h-8" />
+            <img src={PayPalLogo} alt="PayPal" className="h-6 md:h-8" />
+          </div>
         </div>
       </div>
 
-      
       <div className="text-center">
         <h3 className="text-base md:text-lg font-bold mb-4">Payment Methods</h3>
         <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
@@ -204,7 +189,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-4 text-xs md:text-sm text-gray-400">
-        ©2025 Glasness Hairline. All Rights Reserved
+        ©2025 Gladness Hairline. All Rights Reserved
       </div>
     </footer>
   );

@@ -180,13 +180,13 @@ const ShoppingCartPage = () => {
                 </div>
               </div>
 
-              <button
-                disabled={cartItems.length === 0}
-                className="w-full asym-btn bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white py-3 md:py-4 font-bold text-base md:text-lg hover:shadow-orange-500/40 disabled:opacity-50 disabled:cursor-not-allowed mb-3 md:mb-4"
+              <a
+                href="/checkout"
+                className={`block w-full asym-btn bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white py-3 md:py-4 font-bold text-base md:text-lg hover:shadow-orange-500/40 text-center mb-3 md:mb-4 ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}
               >
                 <CreditCard className="inline mr-2" size={18} />
                 Proceed to Checkout
-              </button>
+              </a>
 
               <a href="/" className="block text-center text-blue-600 hover:text-blue-700 font-medium text-sm md:text-base">
                 ← Continue Shopping

@@ -10,9 +10,20 @@ const slides = [
   {
     id: 1,
     content: (
-      <div className="relative bg-gradient-to-r from-[#4169E1] to-[#5a7fd6] text-white h-[500px] md:h-[700px] flex items-center overflow-hidden">
-        <div className="pl-4 md:pl-12 z-10 max-w-[50%] md:max-w-none">
-          <div className="bg-white/20 backdrop-blur-xl rounded-tl-[60px] rounded-br-[60px] rounded-tr-[20px] rounded-bl-[20px] p-4 md:p-8 border-2 border-white/40 shadow-2xl transition-all duration-500 hover:rounded-tr-[60px] hover:rounded-bl-[60px] hover:rounded-tl-[20px] hover:rounded-br-[20px] hover:bg-white/25">
+      <div className="relative text-white h-[700px] md:h-[700px] flex items-center overflow-hidden">
+        <video
+          src={Gladhair}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ pointerEvents: 'none' }}
+        ></video>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 w-full flex justify-center md:justify-start px-4 md:px-12">
+          <div className="bg-white/20 backdrop-blur-xl rounded-tl-[60px] rounded-br-[60px] rounded-tr-[20px] rounded-bl-[20px] p-6 md:p-8 border-2 border-white/40 shadow-2xl transition-all duration-500 hover:rounded-tr-[60px] hover:rounded-bl-[60px] hover:rounded-tl-[20px] hover:rounded-br-[20px] hover:bg-white/25 max-w-2xl">
             <div className="flex items-center gap-2 mb-2">
               <Star className="w-5 h-5 md:w-8 md:h-8 text-orange-400" />
               <h1 className="text-xl md:text-7xl font-bold italic drop-shadow-2xl text-white">
@@ -27,30 +38,16 @@ const slides = [
             </button>
           </div>
         </div>
-        <div className="absolute right-0 bottom-0 h-full w-1/2 md:w-1/2 opacity-90">
-          <video
-            src={Gladhair}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="h-full w-full object-cover"
-            style={{ pointerEvents: 'none' }}
-          ></video>
-        </div>
       </div>
     ),
   },
   {
     id: 2,
     content: (
-      <div className="relative bg-gradient-to-br from-[#4169E1] via-[#5a7fd6] to-[#6b8dd8] h-[500px] md:h-[700px] flex items-center justify-center md:justify-start p-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl"></div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-md w-[90%] md:w-[380px] asym-card shadow-2xl p-3 md:p-6 z-10 border border-white/20">
+      <div className="relative h-[700px] md:h-[700px] flex items-center justify-center overflow-hidden">
+        <img src={Model} alt="Model" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 bg-white/10 backdrop-blur-md w-[90%] md:w-[380px] asym-card shadow-2xl p-3 md:p-6 border border-white/20">
           <div className="relative overflow-hidden asym-card mb-3">
             <img src={Training} alt="" className="h-[140px] md:h-[260px] w-full object-cover" />
             <div className="absolute top-2 right-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-2 py-1 asym-btn font-bold shadow-lg">HOT</div>
@@ -62,25 +59,26 @@ const slides = [
           <p className="text-orange-400 font-bold text-sm md:text-lg mb-3">Cost: $100</p>
           <Button />
         </div>
-        <div className="absolute right-4 md:right-20 top-1/2 transform -translate-y-1/2 hidden md:block">
-          <div className="relative">
-            <div className="absolute inset-0 bg-orange-400 rounded-full blur-2xl opacity-30"></div>
-            <img
-              src={Model}
-              alt="Model"
-              className="h-[200px] md:h-[480px] rounded-full object-cover shadow-2xl relative z-10 border-4 border-white/20"
-            />
-          </div>
-        </div>
       </div>
     ),
   },
   {
     id: 3,
     content: (
-      <div className="relative bg-gradient-to-br from-[#2d4a9e] via-[#4169E1] to-[#5a7fd6] h-[500px] md:h-[700px] flex items-center overflow-hidden">
-        <div className="relative p-4 md:p-12 z-10 max-w-[50%] md:max-w-none animate-fadeInLeft">
-          <div className="bg-white/10 backdrop-blur-md rounded-tl-[60px] rounded-br-[60px] rounded-tr-[20px] rounded-bl-[20px] p-4 md:p-8 border border-white/20 shadow-2xl transition-all duration-500 hover:rounded-tr-[60px] hover:rounded-bl-[60px] hover:rounded-tl-[20px] hover:rounded-br-[20px]">
+      <div className="relative h-[700px] md:h-[700px] flex items-center overflow-hidden">
+        <video
+          src={Hair}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ pointerEvents: 'none' }}
+        ></video>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 w-full flex justify-center md:justify-start px-4 md:px-12">
+          <div className="bg-white/10 backdrop-blur-md rounded-tl-[60px] rounded-br-[60px] rounded-tr-[20px] rounded-bl-[20px] p-6 md:p-8 border border-white/20 shadow-2xl transition-all duration-500 hover:rounded-tr-[60px] hover:rounded-bl-[60px] hover:rounded-tl-[20px] hover:rounded-br-[20px] max-w-2xl">
             <div className="flex items-center gap-2 mb-2">
               <Star className="w-6 h-6 md:w-10 md:h-10 text-orange-400" />
               <h1 className="text-2xl md:text-6xl text-white font-bold italic drop-shadow-lg">
@@ -94,19 +92,6 @@ const slides = [
             </button>
           </div>
         </div>
-        <div className="absolute right-0 bottom-0 h-full w-1/2 md:w-1/2">
-          <video
-            src={Hair}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="h-full w-full object-cover opacity-90"
-            style={{ pointerEvents: 'none' }}
-          ></video>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2d4a9e] via-transparent to-transparent pointer-events-none"></div>
       </div>
     ),
   },
@@ -132,7 +117,7 @@ const CarouselBanner = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[500px] md:h-[700px] overflow-hidden">
+    <div className="relative w-full h-[700px] md:h-[700px] overflow-hidden">
       <div
         className="flex transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -146,13 +131,13 @@ const CarouselBanner = () => {
 
       <button
         onClick={handlePrev}
-        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:p-2 rounded-full shadow-lg"
+        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:p-2 rounded-tl-[30px] rounded-br-[30px] rounded-tr-[8px] rounded-bl-[8px] shadow-lg transition-all duration-500 hover:rounded-tr-[30px] hover:rounded-bl-[30px] hover:rounded-tl-[8px] hover:rounded-br-[8px]"
       >
         <ChevronLeft size={16} className="md:w-6 md:h-6" />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:p-2 rounded-full shadow-lg"
+        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:p-2 rounded-tl-[30px] rounded-br-[30px] rounded-tr-[8px] rounded-bl-[8px] shadow-lg transition-all duration-500 hover:rounded-tr-[30px] hover:rounded-bl-[30px] hover:rounded-tl-[8px] hover:rounded-br-[8px]"
       >
         <ChevronRight size={16} className="md:w-6 md:h-6" />
       </button>

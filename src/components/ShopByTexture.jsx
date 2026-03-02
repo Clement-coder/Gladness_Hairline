@@ -61,11 +61,11 @@ const ShopByTexture = () => {
                 className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="bg-white/20 backdrop-blur-md border border-white/30 px-4 py-2 asym-btn text-white font-semibold text-sm md:text-lg shadow-xl">
-                {texture.name.toUpperCase()}
-              </span>
+              <div className="absolute top-2 right-2">
+                <span className="bg-white/20 backdrop-blur-md border border-white/30 px-3 py-1 asym-btn text-white font-semibold text-xs md:text-sm shadow-xl">
+                  {texture.name.toUpperCase()}
+                </span>
+              </div>
             </div>
           </div>
         ))}
